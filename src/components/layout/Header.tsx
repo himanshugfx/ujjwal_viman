@@ -74,31 +74,60 @@ const Header = () => {
                 </button>
             </div>
 
-            {/* Mobile Nav */}
+            {/* Mobile Nav Overlay */}
             {isMobileMenuOpen && (
-                <div className="md:hidden fixed inset-0 z-40 bg-white animate-in fade-in slide-in-from-right duration-300">
-                    <div className="flex flex-col h-full">
-                        <div className="flex items-center justify-between p-6 border-b">
+                <div className="md:hidden fixed inset-0 z-[100] bg-green-950/98 backdrop-blur-xl transition-all duration-300 flex flex-col">
+                    <div className="relative z-10 flex flex-col h-full">
+                        {/* Header in Menu */}
+                        <div className="flex items-center justify-between p-6">
                             <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                                <Image src="/assets/img/logo.png" alt="Logo" width={120} height={32} className="h-8 w-auto" />
-                                <span className="text-xl font-bold text-green-900 outfit">Ujjwal Viman</span>
+                                <Image
+                                    src="/assets/img/logo.png"
+                                    alt="Logo"
+                                    width={100}
+                                    height={28}
+                                    className="h-8 w-auto brightness-0 invert"
+                                />
+                                <span className="text-xl font-bold text-white outfit uppercase tracking-wider">Ujjwal Viman</span>
                             </Link>
-                            <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-gray-500">
-                                <X className="w-6 h-6" />
+                            <button
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="p-2 text-white/70 hover:text-white transition-colors"
+                            >
+                                <X className="w-8 h-8" />
                             </button>
                         </div>
-                        <nav className="flex flex-col p-8 gap-6">
+
+                        {/* Navigation Links */}
+                        <nav className="flex flex-col items-center justify-center flex-grow gap-8 px-8">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-2xl font-bold text-gray-900 hover:text-green-700 transition-colors"
+                                    className="text-3xl font-bold text-white/80 hover:text-white transition-all outfit uppercase tracking-widest"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
                                 </Link>
                             ))}
                         </nav>
+
+                        {/* Menu Footer */}
+                        <div className="p-8 mt-auto border-t border-white/5 bg-black/40">
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="flex gap-8">
+                                    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" className="text-white/50 hover:text-green-500 transition-colors">
+                                        <Image src="/assets/img/icon/whatsapp.png" alt="WhatsApp" width={24} height={24} className="opacity-70 hover:opacity-100" />
+                                    </a>
+                                    <a href="mailto:info@ujjwalviman.com" className="text-white/50 hover:text-white transition-colors">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p className="text-white/20 text-[10px] mt-2 font-mono uppercase tracking-widest">© 2026 Ujjwal Viman</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}

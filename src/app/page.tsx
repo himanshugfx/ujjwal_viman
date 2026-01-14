@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col w-full">
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* GIF Background Replacement (Placeholder or actual if accessible) */}
+        {/* GIF Background with dark overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/40 z-10" />
           <Image
@@ -22,28 +22,35 @@ export default function Home() {
         </div>
 
         <div className="container relative z-20 px-6 text-center text-white">
-          <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight outfit">
-              Ujjwal <span className="text-green-500">Viman</span>
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-200">
-              <span className="bg-green-700/50 backdrop-blur-sm px-4 py-1.5 rounded-full border border-green-500/30">
-                DGCA Type Certified
-              </span>
+          <div className="max-w-4xl mx-auto flex flex-col items-center space-y-4 animate-in fade-in slide-in-from-bottom-12 duration-1000">
+            {/* Title Section */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight outfit uppercase">
+                Ujjwal
+              </h1>
+              <div className="bg-[#1a237e] px-6 py-2 md:py-3 rounded-[1.2rem] md:rounded-[2rem] shadow-xl">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight outfit uppercase text-white">
+                  Viman
+                </h1>
+              </div>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-base md:text-lg font-semibold tracking-widest uppercase text-gray-200">
+              DGCA Type Certified
             </p>
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold opacity-90 leading-tight md:leading-relaxed">
-              Fostering Agriculture <br className="md:hidden" /> Drone Ecosystem
-            </h2>
+
+            {/* Buttons */}
             <div className="flex flex-wrap justify-center gap-4 pt-10">
               <Link
                 href="/ujjwal-viman"
-                className="px-8 py-4 bg-green-600 hover:bg-green-500 text-white rounded-full font-bold transition-all shadow-xl hover:shadow-green-500/20 flex items-center gap-2 group"
+                className="px-8 py-3.5 bg-green-600 hover:bg-green-500 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-green-500/20 flex items-center gap-2 group text-base"
               >
-                Explore Drone <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Explore Drone <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md rounded-full font-bold transition-all"
+                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md rounded-full font-bold transition-all text-base"
               >
                 Get in Touch
               </Link>
