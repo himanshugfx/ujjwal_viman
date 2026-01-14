@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* LOGO css */
+.navbar-brand img {
+    width: 8pc;
+    height: 5pc;
+    mix-blend-mode: multiply;
+}
+
+
+
+/* HEADER SECTION */
+.header-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+.header-section h5 {
+    text-align: center;
+    font-weight: 800;
+    margin: 1pc 0pc 0pc 0pc;
+}
+
+.image-ujjwal-viman {
+    text-align: center;
+    margin: 5pc 0pc 0pc 0pc;
+}
+
+.ujjwal-viman-info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+
+    margin: 5pc 0pc 0pc 0pc;
+
+}
+
+/* DRONE SECTION INFORMATION */
+
+.drone-Info {
+    background-color: #000258;
+    color: aliceblue;
+}
+
+.drone-image-info {
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.ujjwal-info {
+    padding: 4pc;
+    width: 47pc;
+}
+
+.drone-image-info img {
+    width: 30pc;
+    height: 17pc;
+
+    margin: 5pc 0pc 0pc 3pc;
+    padding: 2pc;
+
+    background-color: #f5f5f5;
+    border-radius: 9pc;
+}
+
+.drone-Logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ARTICLE SECTION */
+.article {
+    margin: 5pc 0pc 0pc 0pc;
+    text-align: center;
+}
+
+.drone-videos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.drone-videos video {
+    width: 40pc;
+    height: 30pc;
+}
+
+
+/* SUB ARTICLE */
+
+.sub-article{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin:5pc 0pc 0pc 0pc ;
+
+    background-color: #38b51a;
+    color: aliceblue;
+}
+
+.drone-efficient-info {
+    width: 20pc;
+    height: 16pc;
+    text-align: center;
+    padding: 1pc;
+    margin:5pc 0pc 0pc 0pc ;
+}
+
+#cost-effect{
+    margin-left: 9pc;
+}
